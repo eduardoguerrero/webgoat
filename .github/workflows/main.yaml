@@ -16,7 +16,7 @@ jobs:
     needs: build
     steps:
       - run: echo "This is a test step"
-
+      
   odc-backend:
     runs-on: ubuntu-20.04
     name: depecheck_test
@@ -36,4 +36,4 @@ jobs:
         uses: actions/upload-artifact@master
         with:
            name: Depcheck report
-           path: ${{github.workspace}}/reports 
+           path: ${{github.workspace}}/reports
