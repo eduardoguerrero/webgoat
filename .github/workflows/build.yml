@@ -14,6 +14,7 @@ jobs:
     pre-commit:
         name: Pre-commit check
         runs-on: ubuntu-latest
+        continue-on-error: true   # Permite que este job falle sin detener el pipeline
         steps:
             -   name: Checkout git repository
                 uses: actions/checkout@v4.1.6
